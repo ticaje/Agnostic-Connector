@@ -8,15 +8,15 @@ declare(strict_types=1);
  * @author      Hector Luis Barrientos <ticaje@filetea.me>
  */
 
-namespace Ticaje\Connector\Test\Unit\Gateway\Client;
+namespace Ticaje\AConnector\Test\Unit\Gateway\Client;
 
-use Ticaje\Connector\Test\Unit\BaseTest;
-use Ticaje\Connector\Interfaces\Protocol\RestClientInterface;
-use Ticaje\Connector\Gateway\Client\Rest;
+use Ticaje\AConnector\Test\Unit\BaseTest;
+use Ticaje\AConnector\Interfaces\Protocol\RestClientInterface;
+use Ticaje\AConnector\Gateway\Client\Rest;
 
 /**
  * Class ConnectionTest
- * @package Ticaje\Connector\Test\Unit\Gateway\Client
+ * @package Ticaje\AConnector\Test\Unit\Gateway\Client
  */
 class ConnectionTest extends BaseTest
 {
@@ -24,8 +24,9 @@ class ConnectionTest extends BaseTest
 
     public function setUp()
     {
-        parent::setUp();
-        $this->client = $this->objectManager->getObject(Rest::class, ['baseUriKey' => RestClientInterface::BASE_URI_KEY]);
+        $this->client = $this->getMockBuilder(Rest::class)
+            ->disableOriginalConstructor()
+            ->getMock();
     }
 
     public function testInstantiateRestClient()

@@ -8,16 +8,16 @@ declare(strict_types=1);
  * @author      Hector Luis Barrientos <ticaje@filetea.me>
  */
 
-namespace Ticaje\Connector\Test\Unit\Gateway\Client;
+namespace Ticaje\AConnector\Test\Unit\Gateway\Client;
 
-use Ticaje\Connector\Gateway\Provider\Credentials;
-use Ticaje\Connector\Interfaces\Protocol\FtpClientInterface;
-use Ticaje\Connector\Test\Unit\BaseTest;
-use Ticaje\Connector\Gateway\Client\Ftp;
+use Ticaje\AConnector\Gateway\Provider\Credentials;
+use Ticaje\AConnector\Interfaces\Protocol\FtpClientInterface;
+use Ticaje\AConnector\Test\Unit\BaseTest;
+use Ticaje\AConnector\Gateway\Client\Ftp;
 
 /**
  * Class ConnectionTest
- * @package Ticaje\Connector\Test\Unit\Gateway\Client
+ * @package Ticaje\AConnector\Test\Unit\Gateway\Client
  */
 class FtpConnectionTest extends BaseTest
 {
@@ -27,11 +27,10 @@ class FtpConnectionTest extends BaseTest
 
     public function setUp()
     {
-        parent::setUp();
         $this->client = $this->getMockBuilder(Ftp::class)
             ->disableOriginalConstructor()
             ->getMock();
-        $this->credentials = $this->objectManager->getObject(Credentials::class);
+        $this->credentials = new Credentials();
     }
 
     public function testInstantiateRestClient()

@@ -8,18 +8,14 @@ declare(strict_types=1);
  * @author      Hector Luis Barrientos <ticaje@filetea.me>
  */
 
-namespace Ticaje\Connector\Test\Unit\Gateway\Authenticator;
+namespace Ticaje\AConnector\Test\Unit\Gateway\Authenticator;
 
-use Ticaje\Connector\Test\Unit\BaseTest;
+use Ticaje\AConnector\Test\Unit\BaseTest;
 
 /**
  * Class ConnectionTest
- * @package Ticaje\Connector\Test\Unit\Gateway\Authenticator
+ * @package Ticaje\AConnector\Test\Unit\Gateway\Authenticator
  */
 class AuthTest extends BaseTest
 {
-    public function setUp()
-    {
-        parent::setUp();
-    }
 }

@@ -47,7 +47,6 @@ class Rest extends Base implements RestClientInterface
      */
     public function generateClient($credentials)
     {
-        // If auth problems the log and return void
         $this->client = $this->clientFactory->create(
             [
                 $this->baseUriKey => $credentials[self::BASE_URI_KEY]

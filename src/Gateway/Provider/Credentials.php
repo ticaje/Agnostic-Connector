@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace Ticaje\AConnector\Gateway\Provider;
 
-use Ticaje\contract\Traits\Getter;
+use Ticaje\Contract\Traits\Getter;
+
 use Ticaje\AConnector\Interfaces\CredentialInterface;
 
 /**

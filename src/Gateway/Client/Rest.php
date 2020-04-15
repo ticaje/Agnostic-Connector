@@ -9,11 +9,11 @@ declare(strict_types=1);
 
 namespace Ticaje\AConnector\Gateway\Client;
 
+use Ticaje\AConnector\Interfaces\Implementors\Client\Rest\RestClientImplementorInterface;
 use Ticaje\Contract\Factory\FactoryInterface;
 use Ticaje\Contract\Patterns\Interfaces\Decorator\ResponderInterface;
 
 use Ticaje\AConnector\Interfaces\Protocol\RestClientInterface;
-use Ticaje\AConnector\Traits\Gateway\Client\Rest as RestTrait;
 
 /**
  * Class Rest
@@ -21,25 +21,23 @@ use Ticaje\AConnector\Traits\Gateway\Client\Rest as RestTrait;
  */
 class Rest extends Base implements RestClientInterface
 {
-    use RestTrait;
-
-    protected $accessToken;
-
-    protected $baseUriKey;
+    private $baseUriKey;
 
     /**
      * Rest constructor.
      * @param ResponderInterface $responder
      * @param FactoryInterface $clientFactory
+     * @param RestClientImplementorInterface $implementor
      * @param string $baseUriKey
      */
     public function __construct(
         ResponderInterface $responder,
         FactoryInterface $clientFactory,
+        RestClientImplementorInterface $implementor,
         string $baseUriKey
     ) {
         $this->baseUriKey = $baseUriKey;
-        parent::__construct($responder, $clientFactory);
+        parent::__construct($responder, $clientFactory, $implementor);
     }
 
     /**
@@ -47,22 +45,25 @@ class Rest extends Base implements RestClientInterface
      */
     public function generateClient($credentials)
     {
-        $this->client = $this->clientFactory->create(
-            [
-                $this->baseUriKey => $credentials[self::BASE_URI_KEY]
-            ]
-        );
-        return $this->client;
+        $client = $this->clientFactory->create([$this->baseUriKey => $credentials[self::BASE_URI_KEY]]);
+        return $this->implementor->setClient($client);
     }
 
     /**
-     * @param $headers
-     * @return array
-     * This method should be abstracted away into a builder class
+     * @inheritDoc
      */
-    protected function generateHeaders($headers)
+    public function request($verb, $endpoint, array $headers = [], array $params)
     {
-        $authTokenHeader = ["Authorization" => "{$this->accessToken}"];
-        return array_merge($headers, $authTokenHeader);
+        $result = $this->implementor->request($verb, $endpoint, $headers, $params);
+        return $this->responder->process($result);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function requestAsync($verb, $endpoint, array $headers = [], array $params)
+    {
+        $result = $this->implementor->requestAsync($verb, $endpoint, $headers, $params);
+        return $this->responder->process($result);
     }
 }

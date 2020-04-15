@@ -26,16 +26,21 @@ abstract class Base implements ClientInterface
 
     protected $responder;
 
+    protected $implementor;
+
     /**
      * Base constructor.
      * @param ResponderInterface $responder
      * @param FactoryInterface $clientFactory
+     * @param ClientInterface $implementor
      */
     public function __construct(
         ResponderInterface $responder,
-        FactoryInterface $clientFactory
+        FactoryInterface $clientFactory,
+        ClientInterface $implementor
     ) {
         $this->responder = $responder;
         $this->clientFactory = $clientFactory;
+        $this->implementor = $implementor;
     }
 }

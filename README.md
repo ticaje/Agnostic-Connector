@@ -2,7 +2,7 @@
 ## PHP Agnostic Connector
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ticaje/agnostic-connector.svg?style=flat-square)](https://packagist.org/packages/ticaje/agnostic-connector)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ae-sagnostic-connectordk.svg?style=flat-square)](https://scrutinizer-ci.com/g/agnostic-connector)
+[![Quality Score](https://img.shields.io/scrutinizer/g/ticaje/agnostic-connector.svg?style=flat-square)](https://scrutinizer-ci.com/g/ticaje/agnostic-connector)
 [![Total Downloads](https://img.shields.io/packagist/dt/ticaje/agnostic-connector.svg?style=flat-square)](https://packagist.org/packages/ticaje/agnostic-connector)
 
 ### Preface

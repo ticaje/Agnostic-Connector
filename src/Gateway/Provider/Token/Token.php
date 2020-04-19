@@ -63,7 +63,7 @@ class Token extends Base implements TokenProviderInterface
             $endPoint = $this->endpoint;
             /** @var ResponseInterface $response */
             $response = $this->connector->request($this->verb, $endPoint, $headers, $params);
-            $this->accessToken = $response->content;
+            $this->accessToken = $response; // Gonna return the response in raw since there must be a responder module interpreting the response in a per business domain basis.
         }
         return $this->accessToken;
     }

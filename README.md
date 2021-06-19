@@ -1,9 +1,11 @@
 # Agnostic Connector
 ## PHP Agnostic Connector
 
+[![GPLv3 License](https://img.shields.io/badge/license-GPLv3-marble.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ticaje/agnostic-connector.svg?style=flat-square)](https://packagist.org/packages/ticaje/agnostic-connector)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ticaje/agnostic-connector.svg?style=flat-square)](https://scrutinizer-ci.com/g/ticaje/agnostic-connector)
+[![Scrutinizer](https://img.shields.io/scrutinizer/g/ticaje/agnostic-connector.svg?style=flat-square)](https://scrutinizer-ci.com/g/ticaje/agnostic-connector)
 [![Total Downloads](https://img.shields.io/packagist/dt/ticaje/agnostic-connector.svg?style=flat-square)](https://packagist.org/packages/ticaje/agnostic-connector)
+[![Blog](https://img.shields.io/badge/Blog-hectorbarrientos.com-magenta)](https://hectorbarrientos.com)
 
 ### Preface
 

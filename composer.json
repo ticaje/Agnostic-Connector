@@ -16,7 +16,7 @@
         "php": "^7.1",
         "ticaje/design-by-contract": "^1.0"
     },
-    "version": "1.0.3",
+    "version": "1.0.4",
     "autoload": {
         "psr-4": {
             "Ticaje\\AConnector\\": "src/"

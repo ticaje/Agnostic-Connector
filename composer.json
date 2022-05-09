@@ -13,10 +13,10 @@
     "description": "Agnostic PHP connector",
     "type": "library",
     "require": {
-        "php": "^7.1",
+        "php": "^7.0",
         "ticaje/design-by-contract": "^1.0"
     },
-    "version": "1.0.4",
+    "version": "1.0.5",
     "autoload": {
         "psr-4": {
             "Ticaje\\AConnector\\": "src/"

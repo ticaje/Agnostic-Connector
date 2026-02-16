@@ -5,7 +5,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ticaje/agnostic-connector.svg?style=flat-square)](https://packagist.org/packages/ticaje/agnostic-connector)
 [![Scrutinizer](https://img.shields.io/scrutinizer/g/ticaje/agnostic-connector.svg?style=flat-square)](https://scrutinizer-ci.com/g/ticaje/agnostic-connector)
 [![Total Downloads](https://img.shields.io/packagist/dt/ticaje/agnostic-connector.svg?style=flat-square)](https://packagist.org/packages/ticaje/agnostic-connector)
-[![Blog](https://img.shields.io/badge/Blog-hectorbarrientos.com-magenta)](https://hectorbarrientos.com)
+[![Author](https://img.shields.io/badge/HBLateral.com-%2302113a?style=labelColor=lightgrey)](https://hblateral.com)
 
 ### Preface
 
